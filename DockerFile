@@ -1,0 +1,7 @@
+FROM openjdk:8-jdk-alpine
+MAINTAINER pegasus.cl
+COPY "./target/pegasus-person-services-0.0.1-SNAPSHOT.jar" "pegasus-person-services.jar"
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","pegasus-person-services.jar"]
+RUN mvn clean install
+CMD mvn spring-boot:run
