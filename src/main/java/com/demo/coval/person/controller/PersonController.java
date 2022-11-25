@@ -61,7 +61,7 @@ public class PersonController {
     }
 
     @PutMapping(value = "/person/{id}", consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
-    @Operation(summary = "Person", description = "Update")
+    @Operation(summary = "Person", description = "Update de persona")
     @ApiResponse(responseCode = "204", description = "person update successfully")
     @ApiResponse(responseCode = "422", description = "Params not valid")
     @ApiResponse(responseCode = "500", description = "Internal Error Server")
